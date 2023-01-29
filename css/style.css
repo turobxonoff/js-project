@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    position: relative;
+    height: 120vh;
+}
+
+.hero-scene .tashkentImg {
+    width: 100%;
+    position: absolute;
+    height: 109vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 10%;
+    left: 27%;
+}
+
+.heading {
+    font-size: 7.7rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: system-ui;
+    text-transform: uppercase;
+    line-height: .95;
+}
+
+.headText {
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: -1px -1px 3px #1a2c4a, 2px 10px 15px #1a2c4ad1;
+}
+
+.bodyText {
+    color: #fff;
+}
+
+.content-footer > .cloud {
+    position: absolute;
+    top: 55%;
+    transform: rotate(-10deg);
+    animation: cloud 6.5s linear infinite;
+}
+
+.cloud:nth-child(2) {
+    left: -110%;
+    top: 55%;
+    animation: cloud2 6.5s linear infinite;
+}
+
+.info {
+    width: 100%;
+    background: rgb(24, 24, 24);
+    min-height: 170vh;
+    z-index: 2;
+    position: absolute;
+}
+
+.info::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #181818 50%);
+}
+
+.info > .text {
+    padding: 10px 60px;
+    font-size: 25px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    text-align: center;
+}
+
+.box {
+    overflow: hidden;
+}
+.box > .image {
+    width: 85%;
+    transition:0.5s ease;
+}
+
+.image:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+}
+
+.box > .heading-text {
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: system-ui;
+    letter-spacing: 0.7rem;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateY(-15px);
+    }
+    25% {
+        transform: translateY(-25px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    75% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        transform: translateY(15px);
+    }
+    25% {
+        transform: translateY(25px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    75% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+/* Responsive web design */
+@media only screen and (max-width: 446.9px) {
+    .hero-content {
+        top: 15%;
+        left: 20%;
+    }
+    .heading {
+        font-size: 2.7rem;
+    }
+    .headText {
+        color: #1a2c4a;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-fill-color: black;
+        text-shadow: none;
+    }
+    .cloud:nth-child(2) {
+        left: -200%;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .info {
+        min-height: 150vh;
+    }
+    .info > .text {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .box {
+        margin-top: 30px;
+    }
+    .box > .heading-text {
+        font-size: 1.1rem;
+        letter-spacing: .3rem;
+    }
+}
